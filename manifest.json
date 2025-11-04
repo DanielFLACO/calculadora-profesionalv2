@@ -2,7 +2,7 @@
   "name": "Calculadoras Profesionales",
   "short_name": "CalcPro",
   "description": "Calculadoras especializadas para Ingenieros, Contadores y Economistas",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",

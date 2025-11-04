@@ -180,6 +180,8 @@ function calcularResistencias() {
     document.getElementById('resultado-resistencias').classList.add('mostrar');
     
     crearGraficaBarras('grafica-resistencias', resistencias, resultado, 'Resistencias (Ω)');
+    // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'resistencias');
 }
 
 function actualizarCamposOhm() {
@@ -252,6 +254,8 @@ function calcularLeyOhm() {
         <p><strong>Ley de Ohm:</strong> V = I × R</p>
     `;
     document.getElementById('resultado-ohm').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'ley-ohm');
 }
 
 function actualizarUnidades() {
@@ -339,6 +343,8 @@ function convertirUnidades() {
             'mmHg': 0.00750062
         };
         resultado = valor * (factores[destino] / factores[origen]);
+        // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'conversion');
     }
     
     document.getElementById('resultado-conversion').innerHTML = `
@@ -422,6 +428,8 @@ function calcularPotencia() {
         <p><strong>Fórmula base:</strong> P = V × I</p>
     `;
     document.getElementById('resultado-potencia').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'potencia');
 }
 
 function calcularCapacitores() {
@@ -449,6 +457,8 @@ function calcularCapacitores() {
         <p><strong>Número de capacitores:</strong> ${capacitores.length}</p>
     `;
     document.getElementById('resultado-capacitores').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'capacitores');
 }
 
 function calcularEstadistica() {
@@ -491,6 +501,8 @@ function calcularEstadistica() {
         <p><strong>Rango:</strong> ${rango}</p>
     `;
     document.getElementById('resultado-estadistica').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('ingenieria', 'estadistica');
     
     crearGraficaLinea('grafica-estadistica', datos, media);
 }

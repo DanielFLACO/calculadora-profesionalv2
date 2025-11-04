@@ -205,6 +205,8 @@ function calcularInteresSimple() {
         </p>
     `;
     document.getElementById('resultado-interes-simple').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('economia', 'interes-simple');
 }
 
 function calcularInteresCompuesto() {
@@ -244,6 +246,8 @@ function calcularInteresCompuesto() {
         </p>
     `;
     document.getElementById('resultado-interes-compuesto').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('economia', 'interes-compuesto');
     
     // Crear gráfica de crecimiento
     crearGraficaInteresCompuesto(capital, tasa, frecuencia, tiempo);
@@ -356,6 +360,8 @@ function calcularInflacion() {
         </p>
     `;
     document.getElementById('resultado-inflacion').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('economia', 'inflacion');
 }
 
 function calcularVAN() {
@@ -427,6 +433,8 @@ function calcularVAN() {
         </p>
     `;
     document.getElementById('resultado-van').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('economia', 'van');
     
     crearGraficaVAN(inversionInicial, flujos, tasaDescuento);
 }
@@ -531,6 +539,8 @@ function calcularAmortizacion() {
         ${tablaHTML}
     `;
     document.getElementById('resultado-amortizacion').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('economia', 'amortizacion');
     
     crearGraficaAmortizacion(datosIntereses, datosCapital, plazoMeses);
 }
@@ -684,4 +694,5 @@ function calcularTipoCambio() {
         <p><strong>Total a recibir:</strong> ${totalConComision.toFixed(2)} ${divisaDestino}</p>
     `;
     document.getElementById('resultado-tipo-cambio').classList.add('mostrar');
+    registrarCalculo('economia', 'tipo-cambio');
 }

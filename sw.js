@@ -1,15 +1,16 @@
-const CACHE_NAME = 'calculadoras-v1';
+const CACHE_NAME = 'calculadoras-v2';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/css/styles.css',
-  '/js/main.js',
-  '/js/ingenieria.js',
-  '/js/contabilidad.js',
-  '/js/economia.js',
-  '/js/graficas.js',
-  '/js/historial.js',
-  '/js/exportar-pdf.js',
+  './',
+  './index.html',
+  './css/styles.css',
+  './js/main.js',
+  './js/ingenieria.js',
+  './js/contabilidad.js',
+  './js/economia.js',
+  './js/graficas.js',
+  './js/historial.js',
+  './js/exportar-pdf.js',
+  './js/temas.js',
   'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'
 ];
@@ -69,8 +70,8 @@ self.addEventListener('fetch', event => {
             return cachedResponse;
           }
           // Si no está en cache y es navegación, muestra página principal
-          if (event.request.mode === 'navigate') {
-            return caches.match('/index.html');
+         if (event.request.mode === 'navigate') {
+            return caches.match('./index.html');
           }
         });
       })

@@ -179,6 +179,8 @@ function calcularDepreciacion() {
         <p><strong>Vida Útil:</strong> ${vidaUtil} años</p>
     `;
     document.getElementById('resultado-depreciacion').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'depreciacion');
 }
 
 function calcularPuntoEquilibrio() {
@@ -208,6 +210,8 @@ function calcularPuntoEquilibrio() {
         </p>
     `;
     document.getElementById('resultado-equilibrio').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'punto-equilibrio');
 }
 
 function calcularIVA() {
@@ -240,6 +244,8 @@ function calcularIVA() {
         <p><strong>Operación:</strong> ${operacion === 'agregar' ? 'IVA agregado' : 'IVA desglosado'}</p>
     `;
     document.getElementById('resultado-iva').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'iva');
 }
 
 function calcularROI() {
@@ -285,6 +291,8 @@ function calcularROI() {
         </p>
     `;
     document.getElementById('resultado-roi').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'roi');
 }
 
 function calcularFlujoCaja() {
@@ -325,6 +333,8 @@ function calcularFlujoCaja() {
         </p>
     `;
     document.getElementById('resultado-flujo-caja').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'flujo-caja');
     
     crearGraficaFlujoCaja('grafica-flujo-caja', ingresos, egresos);
 }
@@ -441,4 +451,6 @@ function calcularRazones() {
         </p>
     `;
     document.getElementById('resultado-razones').classList.add('mostrar');
+    // Registrar en estadísticas
+    registrarCalculo('contabilidad', 'razones');
 }
